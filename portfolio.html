@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio Justin Dijk</title>
+  <style>
+    body {
+      background-image: url('starry_background.png');
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh; 
+      position: relative;
+      overflow-x:hidden
+    }
+
+    header {
+      text-align: center;
+      padding: 15px 20px; 
+      position: fixed;
+      width: 100%; 
+      top: 0;
+      z-index: 1000;
+      box-sizing: border-box;
+      background-color: #2c2c2c;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    button {
+      background-color: #555;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 0 5px; 
+    }
+
+    button:hover {
+      background-color: #777;
+    }
+
+    section {
+      margin: 50px;
+      color: white;
+    }
+
+    #introduction {
+      text-align: center;
+      color: rgb(255, 255, 255);
+      padding-top: 60px;
+      padding-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <button onclick="scrollToSection('top')">Home</button>
+    <div class="empty-space"></div>
+    <div class="empty-space"></div>
+    <div class="empty-space"></div>
+    <button onclick="scrollToSection('section1')">Over mij</button>
+    <button onclick="scrollToSection('section2')">CV</button>
+    <button onclick="scrollToSection('section3')">Projecten</button>
+    <button onclick="scrollToSection('section4')">contact</button>
+  </nav>
+</header>
+
+<section id="introduction">
+  <h1>welkom op het portfolio van justin dijk</h1>
+  <p>op het moment is het nog een beetje leeg, maar dat hoop ik snel te veranderen!</p>
+</section>
+
+<section id="section1">
+  <h2>Over mij</h2>
+  <p>Ik ben justin dijk, ik ben op het moment een student bij het alfa college in groningen, ik maak graag programma's en webpagina's. <br> 
+  als ik niet bezig ben met school dan ben ik waarschijnlijk aan het gamen of een bordspel aan het spelen met mijn familie <br>
+  ik heb van jongs af aan computers altijd heel interresant gevonden, en mijn vader is ook programeur dus ik heb van hem veel te horen gekregen over computers en code<br>
+  zelf heb ik nooit veel geprogrameerd voordat ik aan de studie begon, maar zodra ik eenmaal bezig was had ik snel door dat het heel goed bij mij pastte<br>
+  ik ben naar het maartenscollge gegaan tijdens mijn middelbare schooltijd, daar heb ik 4 jaar lang tweetalig onderwijs gedaan en heb daar een certificaat aan overgehouden<br>
+  </p>
+</section>
+
+<section id="section2">
+  <h2>CV</h2>
+  <p>ik weet niet echt wat ik hier moet stoppen</p>
+</section>
+
+<section id="section3">
+  <h2>Projecten</h2>
+  <p> This is a onepager that I recreated for a school project using grids  <a href="../OnePager/onepager.html">onepager</a></p>
+  <p> This is that same onepager, except I modified the CSS and the Javascript so that it would be unbearable to look at <a href="../OnePager_bad/onepager_bad.html">onepager(ruined)</a></p>
+</section>
+
+<section id="section4">
+  <h2>Contact</h2>
+  <p>school email: j.dijk05@student.alfa-college.nl<br>
+    persoonlijke email: justin.dijk@home.nl<br>
+  </p>
+</section>
+
+<footer>
+  <p>bedankt voor het bezoeken van de pagina, fijne dag!</p>
+</footer>
+
+<script>
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (sectionId === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      var offset = section.offsetTop - 20; 
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  }
+</script>
+
+</body>
+</html>
